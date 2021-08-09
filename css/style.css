@@ -1,0 +1,136 @@
+/* Start Variables */
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --v-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+button {
+    border: none;
+    background-color: white;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Summary */
+.summary {
+    padding: 100px 0;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: cover;
+}
+.summary .container {
+    width: 350px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+.container > div {
+    background-color: white;
+}
+.container > div:nth-last-child(1) {
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+}
+.container .image img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.container .text {
+    padding-top: 30px;
+    text-align: center;
+}
+.container .text h2 {
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+.container .text p {
+    color: var(--desaturated-blue);
+    width: 80%;
+    margin: 0 auto;
+}
+.container .select {
+    display: flex;
+    padding: 26px;
+    font-size: 14px;
+    align-items: center;
+}
+.container .select .icon {
+    margin-right: 15px;
+}
+.container .select .price .type {
+    font-weight: bold;
+}
+.container .select .price .money  {
+    margin-top: 7px;
+    color: var(--desaturated-blue);
+}
+.container .select button {
+    margin-left: auto;
+    color: var(--bright-blue);
+    border-bottom: 1px solid var(--bright-blue);
+    padding-bottom: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container .submit > button {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.container .submit .proceed {
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+.container .submit .cancel {
+    padding: 30px 0 30px 0 !important;
+    color: var(--desaturated-blue);
+}
+@media (max-width:767px) {
+    .summary {
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-size: cover;
+    }
+}
+/* End Summary */
